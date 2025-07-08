@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, Bot, Users, TrendingUp, Shield, Calculator, Pill, Search, DollarSign, Briefcase, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Users, TrendingUp, Shield, Calculator, Pill, Search, DollarSign, Briefcase, Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -40,20 +40,24 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-gray-200">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-300 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <Bot className="h-8 w-8 text-blue-600" />
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/429211bc-0de8-4f88-9f31-4a60a9069598.png" 
+                alt="Mo-Blind Solutions Logo" 
+                className="h-10 w-auto"
+              />
               <span className="text-xl font-bold text-gray-900">Mo-Blind Solutions LLC</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Services</button>
-              <button onClick={() => scrollToSection('case-studies')} className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Case Studies</button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-blue-600 transition-colors font-medium">About</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-blue-600 transition-colors font-medium">Contact</button>
+              <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</button>
+              <button onClick={() => scrollToSection('case-studies')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Case Studies</button>
+              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">About</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</button>
             </div>
           </div>
         </div>
@@ -63,14 +67,13 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
-            <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm bg-blue-100 text-blue-800 hover:bg-blue-200">
+            <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm bg-gray-200 text-gray-800 hover:bg-gray-300 border border-gray-300">
               AI-Powered Business Solutions
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Do More With
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"> Less</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-black mb-6 leading-tight">
+              Do More With Less
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               We specialize in using the latest AI tools to create innovative solutions that help small businesses and nonprofits streamline operations and increase efficiency.
             </p>
           </div>
@@ -144,7 +147,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="px-8 py-4 text-lg border-2 border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300"
+              className="px-8 py-4 text-lg border-2 border-gray-300 hover:bg-gray-100 hover:border-gray-400 transition-all duration-300"
               onClick={() => scrollToSection('case-studies')}
             >
               View Our Work
@@ -154,55 +157,59 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-200 to-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-black mb-4">Our Services</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Transform your operations with AI-powered solutions tailored to your unique needs
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:scale-105">
+            <Card className="hover:shadow-xl transition-all duration-300 border border-gray-300 shadow-lg bg-white hover:scale-105">
               <CardHeader>
                 <Users className="h-12 w-12 text-blue-600 mb-4" />
-                <CardTitle>Process Automation</CardTitle>
+                <CardTitle className="text-black">Process Automation</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-gray-600">
                   Eliminate redundant work and streamline your current processes with intelligent automation solutions.
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:scale-105">
+            <Card className="hover:shadow-xl transition-all duration-300 border border-gray-300 shadow-lg bg-white hover:scale-105">
               <CardHeader>
                 <TrendingUp className="h-12 w-12 text-green-600 mb-4" />
-                <CardTitle>Fundraising Campaigns</CardTitle>
+                <CardTitle className="text-black">Fundraising Campaigns</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-gray-600">
                   Create data-driven fundraising campaigns that maximize donor engagement and contribution rates.
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:scale-105">
+            <Card className="hover:shadow-xl transition-all duration-300 border border-gray-300 shadow-lg bg-white hover:scale-105">
               <CardHeader>
                 <Shield className="h-12 w-12 text-purple-600 mb-4" />
-                <CardTitle>Custom CRM Solutions</CardTitle>
+                <CardTitle className="text-black">Custom CRM Solutions</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-gray-600">
                   Build tailored customer and donor management systems that grow with your organization.
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white/80 backdrop-blur-sm hover:scale-105">
+            <Card className="hover:shadow-xl transition-all duration-300 border border-gray-300 shadow-lg bg-white hover:scale-105">
               <CardHeader>
-                <Bot className="h-12 w-12 text-indigo-600 mb-4" />
-                <CardTitle>AI Integration</CardTitle>
+                <img 
+                  src="/lovable-uploads/429211bc-0de8-4f88-9f31-4a60a9069598.png" 
+                  alt="Mo-Blind Logo" 
+                  className="h-12 w-12 mb-4 object-contain"
+                />
+                <CardTitle className="text-black">AI Integration</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription>
+                <CardDescription className="text-gray-600">
                   Maximize your client base with intelligent tools that enhance decision-making and efficiency.
                 </CardDescription>
               </CardContent>
@@ -212,90 +219,90 @@ const Index = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <section id="case-studies" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-black mb-4">Success Stories</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Real solutions that have transformed how our clients operate
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-gradient-to-br from-blue-50 to-white hover:scale-105">
+            <Card className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Users className="h-8 w-8 text-blue-600" />
-                  <CardTitle className="text-xl">CRM Lite for Nonprofits</CardTitle>
+                  <CardTitle className="text-xl text-black">CRM Lite for Nonprofits</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base mb-4">
+                <CardDescription className="text-base mb-4 text-gray-600">
                   Comprehensive volunteer and donor management system with mass communication capabilities.
                 </CardDescription>
                 <div className="space-y-2">
-                  <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Volunteer Tracking</Badge>
-                  <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Donor Management</Badge>
-                  <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Mass Communication</Badge>
-                  <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Skills Tagging</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Volunteer Tracking</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Donor Management</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Mass Communication</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Skills Tagging</Badge>
                 </div>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-gradient-to-br from-green-50 to-white hover:scale-105">
+            <Card className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Pill className="h-8 w-8 text-green-600" />
-                  <CardTitle className="text-xl">Senior Medication Reminder</CardTitle>
+                  <CardTitle className="text-xl text-black">Senior Medication Reminder</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base mb-4">
+                <CardDescription className="text-base mb-4 text-gray-600">
                   Smart medication management app with audio reminders and caregiver portal for family peace of mind.
                 </CardDescription>
                 <div className="space-y-2">
-                  <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Audio Reminders</Badge>
-                  <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Caregiver Portal</Badge>
-                  <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Compliance Tracking</Badge>
-                  <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Family Notifications</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Audio Reminders</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Caregiver Portal</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Compliance Tracking</Badge>
+                  <Badge variant="outline" className="bg-gray-100 text-gray-800 border-gray-300">Family Notifications</Badge>
                 </div>
               </CardContent>
             </Card>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-gradient-to-br from-purple-50 to-white hover:scale-105">
+            <Card className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Search className="h-8 w-8 text-purple-600" />
-                  <CardTitle className="text-lg">Grant Finder Tool</CardTitle>
+                  <CardTitle className="text-lg text-black">Grant Finder Tool</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-sm">
+                <CardDescription className="text-sm text-gray-600">
                   AI-powered grant discovery and application drafting system that matches nonprofits with relevant funding opportunities.
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-gradient-to-br from-orange-50 to-white hover:scale-105">
+            <Card className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Calculator className="h-8 w-8 text-orange-600" />
-                  <CardTitle className="text-lg">VA Loan Calculator</CardTitle>
+                  <CardTitle className="text-lg text-black">VA Loan Calculator</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-sm">
+                <CardDescription className="text-sm text-gray-600">
                   Comprehensive tool for veterans to calculate remaining VA benefits, compare investments, and analyze cash flow, IRR, and NPV.
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-gradient-to-br from-teal-50 to-white hover:scale-105">
+            <Card className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Briefcase className="h-8 w-8 text-teal-600" />
-                  <CardTitle className="text-lg">Side Hustle Advisor</CardTitle>
+                  <CardTitle className="text-lg text-black">Side Hustle Advisor</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-sm">
+                <CardDescription className="text-sm text-gray-600">
                   Intelligent questionnaire system that provides personalized side business recommendations based on individual circumstances and goals.
                 </CardDescription>
               </CardContent>
@@ -305,20 +312,20 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-200 to-gray-300">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">About Mo-Blind Solutions</h2>
-          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+          <h2 className="text-4xl font-bold text-black mb-6">About Mo-Blind Solutions</h2>
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
             At Mo-Blind Solutions LLC, we believe in the power of intelligent automation to transform how organizations operate. 
-            Our mission is simple: help you <strong>do more with less</strong> through innovative AI-powered solutions.
+            Our mission is simple: help you <strong className="text-black">do more with less</strong> through innovative AI-powered solutions.
           </p>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
             Whether you're looking to eliminate redundant work, streamline and document your current processes, 
             create effective fundraising campaigns, or maximize your client base, we have the expertise and tools to assist you. 
             Every solution we create is tailored to your unique needs and designed to grow with your organization.
           </p>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-100 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Approach</h3>
+          <div className="bg-gradient-to-r from-gray-100 to-gray-200 rounded-xl p-8 border border-gray-300 shadow-lg">
+            <h3 className="text-2xl font-bold text-black mb-4">Our Approach</h3>
             <p className="text-gray-700 leading-relaxed">
               We don't believe in one-size-fits-all solutions. Instead, we take the time to understand your specific challenges, 
               workflows, and goals. Then we leverage cutting-edge AI tools and proven development practices to create solutions 
@@ -390,16 +397,20 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Bot className="h-6 w-6 text-blue-400" />
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <img 
+              src="/lovable-uploads/429211bc-0de8-4f88-9f31-4a60a9069598.png" 
+              alt="Mo-Blind Solutions Logo" 
+              className="h-8 w-auto"
+            />
             <span className="text-lg font-semibold">Mo-Blind Solutions LLC</span>
           </div>
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-300 mb-4">
             Empowering organizations to do more with less through innovative AI solutions.
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             © 2024 Mo-Blind Solutions LLC. All rights reserved.
           </p>
         </div>
