@@ -268,16 +268,19 @@ const Index = () => {
             </Card>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105">
+            <Card 
+              className="hover:shadow-2xl transition-all duration-300 border border-gray-300 shadow-lg bg-gradient-to-br from-gray-50 to-white hover:scale-105 cursor-pointer"
+              onClick={() => window.open('http://investisense.mo-blind.com/', '_blank')}
+            >
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
-                  <Search className="h-8 w-8 text-purple-600" />
-                  <CardTitle className="text-lg text-black">Grant Finder Tool</CardTitle>
+                  <DollarSign className="h-8 w-8 text-purple-600" />
+                  <CardTitle className="text-lg text-black">InvestiSense</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-gray-600">
-                  AI-powered grant discovery and application drafting system that matches nonprofits with relevant funding opportunities.
+                  Calculate your VA loan entitlement and analyze investment properties with precision.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -285,12 +288,12 @@ const Index = () => {
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Calculator className="h-8 w-8 text-orange-600" />
-                  <CardTitle className="text-lg text-black">VA Loan Calculator</CardTitle>
+                  <CardTitle className="text-lg text-black">Financial Analysis Tool</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-gray-600">
-                  Comprehensive tool for veterans to calculate remaining VA benefits, compare investments, and analyze cash flow, IRR, and NPV.
+                  Analyze cash-on-cash return (CoC), internal rate of return (IRR), and net present value (NPV).
                 </CardDescription>
               </CardContent>
             </Card>
